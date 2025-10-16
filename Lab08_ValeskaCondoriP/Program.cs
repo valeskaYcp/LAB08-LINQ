@@ -1,6 +1,8 @@
 using Lab08_ValeskaCondoriP.Models;
 using Lab08_ValeskaCondoriP.Repositories.Implementacion;
 using Lab08_ValeskaCondoriP.Repositories.Interfaz;
+using Lab08_ValeskaCondoriP.Services.Implementaciones;
+using Lab08_ValeskaCondoriP.Services.Interfaces;
 using Lab08_ValeskaCondoriP.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 
@@ -25,6 +27,10 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Controladores
 builder.Services.AddControllers();
+
+//Servicios
+builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
 
 var app = builder.Build();
 

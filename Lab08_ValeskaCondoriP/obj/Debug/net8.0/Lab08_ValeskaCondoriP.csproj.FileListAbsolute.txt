@@ -133,3 +133,4 @@ C:\DAEA\Lab08_ValeskaCondoriP\Lab08_ValeskaCondoriP\obj\Debug\net8.0\refint\Lab0
 C:\DAEA\Lab08_ValeskaCondoriP\Lab08_ValeskaCondoriP\obj\Debug\net8.0\Lab08_ValeskaCondoriP.pdb
 C:\DAEA\Lab08_ValeskaCondoriP\Lab08_ValeskaCondoriP\obj\Debug\net8.0\Lab08_ValeskaCondoriP.genruntimeconfig.cache
 C:\DAEA\Lab08_ValeskaCondoriP\Lab08_ValeskaCondoriP\obj\Debug\net8.0\ref\Lab08_ValeskaCondoriP.dll
+C:\DAEA\Lab08_ValeskaCondoriP\Lab08_ValeskaCondoriP\obj\Debug\net8.0\Lab08_ValeskaCondoriP.sourcelink.json

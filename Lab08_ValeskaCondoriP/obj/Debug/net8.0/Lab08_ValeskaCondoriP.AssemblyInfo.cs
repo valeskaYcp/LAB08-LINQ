@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lab08_ValeskaCondoriP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec3856bd88d0ac3dfe9edbbd3f5c69a6d4205dd0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lab08_ValeskaCondoriP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lab08_ValeskaCondoriP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

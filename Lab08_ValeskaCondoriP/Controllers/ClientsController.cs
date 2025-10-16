@@ -1,5 +1,4 @@
-using Lab08_ValeskaCondoriP.Models;
-using Lab08_ValeskaCondoriP.UnitOfWork;
+using Lab08_ValeskaCondoriP.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lab08_ValeskaCondoriP.Controllers;
@@ -8,56 +7,58 @@ namespace Lab08_ValeskaCondoriP.Controllers;
 [Route("api/[controller]")]
 public class ClientsController : ControllerBase
 {
-    private readonly IUnitOfWork _uow;
+    private readonly IClientService _clientService;
 
-    public ClientsController(IUnitOfWork uow)
+    public ClientsController(IClientService clientService)
     {
-        _uow = uow;
+        _clientService = clientService;
     }
 
-    /*[HttpGet]
+    /* Endpoint para obtener todos los clientes
+    [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        var clients = await _uow.Clients.GetAllAsync();
+        var clients = await _clientService.GetAllAsync();
         return Ok(clients);
     }
 
+    // Buscar clientes por nombre
     [HttpGet("search")]
     public async Task<IActionResult> SearchByName([FromQuery] string name)
     {
-        var clients = await _uow.Clients.GetByNameAsync(name);
+        var clients = await _clientService.GetByNameAsync(name);
         return Ok(clients);
     }
 
+    // Crear un cliente
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] Client client)
     {
-        await _uow.Clients.AddAsync(client);
-        await _uow.SaveAsync();
+        await _clientService.AddAsync(client);
         return Ok(client);
     }*/
-    
-    //consulta con AsNoTracking
+
+    // Consulta con AsNoTracking
     [HttpGet("with-orders")]
     public IActionResult GetClientsWithOrders()
     {
-        var clientOrders = _uow.Clients.GetClientsWithOrders();
+        var clientOrders = _clientService.GetClientsWithOrders();
         return Ok(clientOrders);
     }
-    
-    //doble consulta
+
+    // Doble consulta: total de productos por cliente
     [HttpGet("products-count")]
     public IActionResult GetClientsWithProductCount()
     {
-        var result = _uow.Clients.GetClientsWithProductCount();
+        var result = _clientService.GetClientsWithProductCount();
         return Ok(result);
     }
-    
-    //Consulta Avanzada con Filtros y Agrupación
+
+    // Consulta avanzada: total de ventas por cliente
     [HttpGet("sales-by-client")]
     public IActionResult GetSalesByClient()
     {
-        var result = _uow.Clients.GetSalesByClient();
+        var result = _clientService.GetSalesByClient();
         return Ok(result);
     }
 }
