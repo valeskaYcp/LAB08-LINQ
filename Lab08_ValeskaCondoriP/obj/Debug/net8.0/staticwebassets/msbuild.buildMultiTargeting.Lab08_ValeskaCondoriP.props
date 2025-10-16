@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Lab08_ValeskaCondoriP.props" />
+</Project>
